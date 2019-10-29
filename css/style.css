@@ -1,3 +1,9 @@
+html, body{
+    background: linear-gradient(skyblue,white);
+    width: auto;
+    height: 100%;
+}
+
 #jumbotron{
     background-color: #21325A;
     color: white;
@@ -5,4 +11,18 @@
 
 .searchStyle{
     background-color: #eee;
+}
+
+.mainWeatherStyle{
+    margin-left: 50px;
+}
+
+.pastInputStyle{
+    margin-top: 10px;
+    background-color: aliceblue;
+}
+
+h4{
+    padding: 10px;
+    
 }
