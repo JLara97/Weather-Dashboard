@@ -14,7 +14,7 @@ $("#search").on("click", function (event) {
         url: queryURL,
         method: "GET"
     }).then(function (data) {
-        
+
         console.log(data);
 
         pastInput();
@@ -35,8 +35,21 @@ $("#search").on("click", function (event) {
         })
 
         $("<div>").addClass("mainWeatherStyle").append($("<h2>").text(city)).append($("<h4>").text("Temperature: " + temp + " F")).append($("<h4>").text("Wind Speed: " + wind + " mph")).append($("<h4>").text("Humidity: " + humid + "%")).append($("<h4>").text("UV Index: " + uvIndex)).appendTo("#mainWeather");
-        
 
+
+    })
+
+    $.ajax({
+        url: "https://api.openweathermap.org/data/2.5/forecast?q=" + userInput + "&appid=" + API_KEY + "&units=imperial",
+        method: "GET"
+    }).then(function (data) {
+        for (var i = 0; i < data.list.length; i++) {
+            if ((i + 1) % 8 === 0) {
+                $("<div>").addClass("card", "text-center", "text-white", "bg-primary").append($("<div>").addClass("card-body")).append(
+                    $("<div>").append($("<p>").text("Temp: " + data.list[i].main.temp),
+                        $("<p>").text("Hum. : " + data.list[i].main.humidity))).appendTo("#forecast");
+            }
+        }
     })
 })
 

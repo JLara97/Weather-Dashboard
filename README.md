@@ -7,18 +7,18 @@
 - [Link](#Link)
 ​
 ### Description
-A daily planner app to help keep track of your day.
+A weather app to help keep track of the daily the weather as well as a 5-day forecast.
 ​
 ### Technologies-Libraries
 - [Bootstrap](https://getbootstrap.com/) - CSS Framework
-- [Moment.js](https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js) - Date and Time Library
+- [OpenWeatherMap](https://openweathermap.org) - Weahter API
 - [jQuery](https://code.jquery.com/jquery-3.3.1.min.js) - JS Framework
 ​
 ### Screenshots
 ​
-![Image](assets/img/screenshot.PNG)
+![Image](images/screenshot.PNG)
 ​
 ​
 ### Link
 Check it out! 
-https://jlara97.github.io/Day-Planner-Hw/
+https://jlara97.github.io/Weahter-Dashboard/
